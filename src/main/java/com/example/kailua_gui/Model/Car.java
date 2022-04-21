@@ -1,6 +1,9 @@
 package com.example.kailua_gui.Model;
 
+import com.example.kailua_gui.StringConverter;
+
 import java.util.Date;
+import java.util.List;
 
 // Test test
 public class Car {
@@ -15,12 +18,12 @@ public class Car {
     private String fuelType;
     private Date registrationDate;
     private int odometer;
-    private String features;
+    private List<String> features;
 
     public Car (){}
 
     public Car(String registrationNumber, String carType, String brand, String model, String variant, double pricePerKilometer,
-               int engineSize, int horsePower, String fuelType, Date registrationDate, int odometer, String features) {
+               int engineSize, int horsePower, String fuelType, Date registrationDate, int odometer, List<String> features) {
         this.registrationNumber = registrationNumber;
         this.carType = carType;
         this.brand = brand;
@@ -33,6 +36,20 @@ public class Car {
         this.registrationDate = registrationDate;
         this.odometer = odometer;
         this.features = features;
+    }
+
+    public Car(DMRCar newCar, double pricePerKilometer) {
+        this.brand = newCar.getMaerkeTypeNavn();
+        this.model = newCar.getModelTypeNavn();
+        this.variant = newCar.getVariantTypeNavn();
+        this.registrationDate = StringConverter.toDateFromDMRDate(newCar.getFoersteRegistreringDato());
+        this.registrationNumber = newCar.getRegNr();
+        this.odometer = newCar.getMotorKilometerstand() * 1000;
+        this.engineSize = (int)newCar.getMotorSlagVolumen();
+        this.horsePower = newCar.getMotorHestekraefter();
+        this.fuelType = newCar.getDrivkraftTypeNavn();
+        this.features = newCar.getKoeretoejUdstyrSamling();
+        this.pricePerKilometer = pricePerKilometer;
     }
 
     public String getRegistrationNumber() { return registrationNumber;}
@@ -57,6 +74,6 @@ public class Car {
     public void setRegistrationDate(Date registrationDate) {this.registrationDate = registrationDate;}
     public int getOdometer() {return odometer;}
     public void setOdometer(int odometer) {this.odometer = odometer;}
-    public String getFeatures() {return features;}
-    public void setFeatures(String features) {this.features = features;}
+    public List<String> getFeatures() {return features;}
+    public void setFeatures(List<String> features) {this.features = features;}
 }
