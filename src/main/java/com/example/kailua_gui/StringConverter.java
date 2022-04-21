@@ -10,7 +10,6 @@ public class StringConverter {
     public static Date toDate(String value, String format) {
 
         return Date.valueOf(LocalDate.parse(value, DateTimeFormatter.ofPattern(format)));
-
     }
 
     public static Date toDateFromDMRDate(String value) {
@@ -21,6 +20,5 @@ public class StringConverter {
     public static Timestamp dateToTimestamp(Date value) {
 
         return new Timestamp(value.getTime());
-
     }
 }
