@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Shared.css">
+    <title>Title</title>
+</head>
+<body>
+    <h1>All customers</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customer: ${customers}">
+            <td th:text="${customer.customerID}"></td>
+            <td th:text="${customer.firstname}"></td>
+            <td th:text="${customer.lastname}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <div class="menu-button" onclick="window.location.href='/'">
+            <span class="material-icons">Go back</span>
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="menu-button" onclick="window.location.href='/createCustomer'">
+            <span class="material-icons">Add new customer</span>
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="menu-button" onclick="window.location.href='/deleteCustomer'">
+            <span class="material-icons">Delete customer</span>
+        </div>
+    </div>
+</body>
+</html>

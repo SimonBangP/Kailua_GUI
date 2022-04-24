@@ -1,0 +1,33 @@
+h1{margin-bottom: 10%}
+body{
+    margin-top: 10%;
+    margin-left: 45%;
+}
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+
+
+    background : linear-gradient(45deg, rgb(117, 224, 192), #5db883);
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+    font-family: 'Times New Roman', sans-serif;
+    color: white;
+}
+
+.menu-button:hover {
+    background: #79E8A7;
+}
+
+.button-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
