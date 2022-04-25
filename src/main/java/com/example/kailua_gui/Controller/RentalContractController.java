@@ -5,9 +5,12 @@ import com.example.kailua_gui.Model.Customer;
 import com.example.kailua_gui.Model.RentalContract;
 import com.example.kailua_gui.Service.RentalContractService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class RentalContractController {
@@ -15,7 +18,9 @@ public class RentalContractController {
     RentalContractService rentalContractService;
 
     @GetMapping("/rentalContract")
-    public String rentalContract () {
+    public String rentalContract (Model model) {
+        List<RentalContract> rentalContractList = rentalContractService.getRentalContract();
+        model.addAttribute("rentalContracts", rentalContractList);
         return "rentalContract/rentalContract";}
 
     @GetMapping ("/createRentalContract")
