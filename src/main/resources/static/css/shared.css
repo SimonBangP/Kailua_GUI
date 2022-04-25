@@ -75,3 +75,11 @@ body{
 #header-buttons th:last-of-type {
     border-right: none;
 }
+
+table, td, th {
+    border: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}

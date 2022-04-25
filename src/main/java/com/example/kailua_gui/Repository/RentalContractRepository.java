@@ -20,7 +20,6 @@ public class RentalContractRepository {
     public List<RentalContract> getRentalContracts (){
         String sql = "SELECT * FROM rental_contracts";
         RowMapper<RentalContract> rowMapper = new BeanPropertyRowMapper<>(RentalContract.class);
-
         return template.query(sql, rowMapper);
     }
 
