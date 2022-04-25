@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Shared.css">
+    <title>rentalContract</title>
+</head>
+<body>
+<h1>Rental Contracts</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Rental Contract ID</th>
+        <th>Registration number</th>
+        <th>Customer ID</th>
+        <th>Start Date Time</th>
+        <th>End Date Time</th>
+        <th>Price</th>
+        <th>Kilometers</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rentalContract: ${rentalContracts}">
+        <td th:text="${rentalContract.rentalContractID}"></td>
+        <td th:text="${rentalContract.registrationNumber}"></td>
+        <td th:text="${rentalContract.customerID}"></td>
+        <td th:text="${rentalContract.startDateTime}"></td>
+        <td th:text="${rentalContract.endDateTime}"></td>
+        <td th:text="${rentalContract.price}"></td>
+        <td th:text="${rentalContract.kilometers}"></td>
+    </tr>
+    </tbody>
+</table>
+<div class="button-container">
+    <div class="menu-button" onclick="window.location.href='/'">
+        <span class="material-icons">Go back</span>
+    </div>
+</div>
+<div class="button-container">
+    <div class="menu-button" onclick="window.location.href='/createRentalContract'">
+        <span class="material-icons">Add new customer</span>
+    </div>
+</div>
+<div class="button-container">
+    <div class="menu-button" onclick="window.location.href='/deleteRentalContract'">
+        <span class="material-icons">Delete customer</span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="shared.css">
+    <title>Create new RentalContract</title>
+</head>
+<body>
+<h1>Create a new rental Contract</h1>
+
+<form action="/createRentalContract" method="post">
+<div style="font-size: 16px">
+        <input type="text" name="rentalContractID" placeholder="Enter DEFAULT"> <br>
+        <input type="text" name="registrationNumber" placeholder="Enter RegistrationNumber"> <br>
+        <input type="text" name="customerID" placeholder="Enter Customer ID"> <br>
+        <label>Enter start date </label>
+        <input type="text" name="startDateTime" placeholder="(YYYY-MM-DD HH:MM:ss)"> <br>
+        <label>Enter end date </label>
+        <input type="text" name="endDateTime" placeholder="(YYYY-MM-DD HH:MM:ss)"> <br>
+        <input type="text" name="price" placeholder="Enter price per Kilometers"> <br>
+        <input type="text" name="kolometers" PLACEHOLDER="Enter Max Kilometers"> <br>
+</div>
+    <input id="submit-button" type="submit" value="Save rentalContract">
+</form>
+<div class="button-container">
+    <div class="menu-button" onclick="window.location.href='/'">
+        <span class="material-icons">Go back</span>
+    </div>
+</div>
+</body>
+</html>

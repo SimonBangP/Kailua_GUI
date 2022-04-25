@@ -3,16 +3,19 @@ package com.example.kailua_gui.Model;
 import java.sql.Timestamp;
 
 public class RentalContract {
-    
+
+
+    private int RentalContractID;
     private String registrationNumber; 
     private int customerID; 
     private Timestamp startDateTime; 
-    private Timestamp endDateTime; 
+    private Timestamp endDateTime;
     private double price; 
     private int kilometers;
 
     public RentalContract(){}
-    public RentalContract(String registrationNumber, int customerID, Timestamp startDateTime, Timestamp endDateTime, double price, int kilometers) {
+    public RentalContract(int id, String registrationNumber, int customerID, Timestamp startDateTime, Timestamp endDateTime, double price, int kilometers) {
+        this.RentalContractID = id;
         this.registrationNumber = registrationNumber;
         this.customerID = customerID;
         this.startDateTime = startDateTime;
@@ -21,10 +24,12 @@ public class RentalContract {
         this.kilometers = kilometers;
     }
 
+    public int getRentalContractID() {return RentalContractID;}
+    public void setRentalContractID(int rentalContractID) {this.RentalContractID = rentalContractID;}
+
     public String getRegistrationNumber() {
         return registrationNumber;
     }
-
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
@@ -32,7 +37,6 @@ public class RentalContract {
     public int getCustomerID() {
         return customerID;
     }
-
     public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
@@ -40,7 +44,6 @@ public class RentalContract {
     public Timestamp getStartDateTime() {
         return startDateTime;
     }
-
     public void setStartDateTime(Timestamp startDateTime) {
         this.startDateTime = startDateTime;
     }
@@ -48,7 +51,6 @@ public class RentalContract {
     public Timestamp getEndDateTime() {
         return endDateTime;
     }
-
     public void setEndDateTime(Timestamp endDateTime) {
         this.endDateTime = endDateTime;
     }
@@ -56,7 +58,6 @@ public class RentalContract {
     public double getPrice() {
         return price;
     }
-
     public void setPrice(double price) {
         this.price = price;
     }
@@ -64,7 +65,6 @@ public class RentalContract {
     public int getKilometers() {
         return kilometers;
     }
-
     public void setKilometers(int kilometers) {
         this.kilometers = kilometers;
     }
