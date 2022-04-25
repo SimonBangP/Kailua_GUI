@@ -4,6 +4,7 @@ package com.example.kailua_gui.Controller;
 import com.example.kailua_gui.Model.Customer;
 import com.example.kailua_gui.Model.RentalContract;
 import com.example.kailua_gui.Service.RentalContractService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import java.util.List;
 @Controller
 public class RentalContractController {
 
+    @Autowired
     RentalContractService rentalContractService;
 
     @GetMapping("/rentalContract")

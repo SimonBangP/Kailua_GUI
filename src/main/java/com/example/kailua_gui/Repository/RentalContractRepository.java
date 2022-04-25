@@ -7,15 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class RentalContractRepository {
+
     @Autowired
     JdbcTemplate template;
 
     public List<RentalContract> getRentalContracts (){
-        String sql = "SELECT * FROM rentalContracts";
+        String sql = "SELECT * FROM rental_contracts";
         RowMapper<RentalContract> rowMapper = new BeanPropertyRowMapper<>(RentalContract.class);
 
         return template.query(sql, rowMapper);
