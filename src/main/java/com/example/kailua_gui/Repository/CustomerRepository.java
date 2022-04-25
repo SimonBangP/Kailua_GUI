@@ -19,7 +19,6 @@ public class CustomerRepository {
     public List<Customer> getCustomers (){
         String sql = "SELECT * FROM customers";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
-
         return template.query(sql, rowMapper);
    }
 

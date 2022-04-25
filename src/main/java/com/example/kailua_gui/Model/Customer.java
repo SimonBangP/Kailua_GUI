@@ -9,9 +9,10 @@ public class Customer {
     private int addressID;
     private int phoneNumber;
     private String eMail;
-    private Date birthday;
+    private String birthday;
 
-    public Customer(int customerID, String firstname, String lastname, int addressID, int phoneNumber, String eMail, Date birthday) {
+    public Customer(){}
+    public Customer(int customerID, String firstname, String lastname, int addressID, int phoneNumber, String eMail, String birthday) {
         this.customerID = customerID;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -69,11 +70,11 @@ public class Customer {
         this.eMail = eMail;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 }

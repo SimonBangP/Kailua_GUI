@@ -20,8 +20,8 @@ public class CustomerController {
 
     @GetMapping("/customer")
     public String customer (Model model) {
-        /*List<Customer> customerList = customerService.getCustomers();
-        model.addAttribute("customers", customerList);*/
+        List<Customer> customerList = customerService.getCustomers();
+        model.addAttribute("customers", customerList);
         return "customer/customer";}
 
     @GetMapping ("/createCustomer")
