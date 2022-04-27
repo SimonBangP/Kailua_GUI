@@ -29,6 +29,7 @@ public class RentalContractController {
     public String create() {
         return "rentalContract/createRentalContract";
     }
+
     @PostMapping("createRentalContract")
     public String create(@ModelAttribute RentalContract rentalContract){
         rentalContractService.createNewRentalContract(rentalContract);
