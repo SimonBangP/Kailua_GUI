@@ -19,4 +19,8 @@ public class CarController {
         List<Car> carList = carService.getCars();
         model.addAttribute("cars", carList);
         return "cars/cars";}
+
+    @GetMapping("/cars/create")
+    public String createCar (){
+        return "cars/createCar";}
 }

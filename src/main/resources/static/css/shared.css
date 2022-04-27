@@ -63,22 +63,6 @@ body{
     font-size: 2rem;
 }
 
-#action-help-text-container {
-    margin-top: 3%;
-
-    display: flex;
-    justify-content: center;
-}
-
-#action-help-text {
-    display: inline;
-    text-align: center;
-
-    font-size: larger;
-
-    border-bottom: 2px solid lightgray;
-}
-
 .menu-button {
     background: lightgray;
     border-radius: 10px;
