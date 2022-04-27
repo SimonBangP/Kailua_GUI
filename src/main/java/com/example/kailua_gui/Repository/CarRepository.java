@@ -32,7 +32,6 @@ public class CarRepository {
     }
     
     public Car findSpecificCar (String regNum){
-
         String sql = "SELECT * FROM cars WHERE RegistrationNumber = ?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         Car car = template.queryForObject(sql, rowMapper, regNum);
