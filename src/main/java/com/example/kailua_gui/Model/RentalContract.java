@@ -1,5 +1,6 @@
 package com.example.kailua_gui.Model;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class RentalContract {
@@ -8,18 +9,18 @@ public class RentalContract {
     private int RentalContractID;
     private String registrationNumber; 
     private int customerID; 
-    private Timestamp startDateTime; 
-    private Timestamp endDateTime;
+    private Date startDate;
+    private Date endDate;
     private double price; 
     private int kilometers;
 
     public RentalContract(){}
-    public RentalContract(int id, String registrationNumber, int customerID, Timestamp startDateTime, Timestamp endDateTime, double price, int kilometers) {
+    public RentalContract(int id, String registrationNumber, int customerID, Date startDate, Date endDate, double price, int kilometers) {
         this.RentalContractID = id;
         this.registrationNumber = registrationNumber;
         this.customerID = customerID;
-        this.startDateTime = startDateTime;
-        this.endDateTime = endDateTime;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.price = price;
         this.kilometers = kilometers;
     }
@@ -41,18 +42,18 @@ public class RentalContract {
         this.customerID = customerID;
     }
 
-    public Timestamp getStartDateTime() {
-        return startDateTime;
+    public Date getStartDate() {
+        return startDate;
     }
-    public void setStartDateTime(Timestamp startDateTime) {
-        this.startDateTime = startDateTime;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Timestamp getEndDateTime() {
-        return endDateTime;
+    public Date getEndDate() {
+        return endDate;
     }
-    public void setEndDateTime(Timestamp endDateTime) {
-        this.endDateTime = endDateTime;
+    public void setEndDateTime(Date endDate) {
+        this.endDate = endDate;
     }
 
     public double getPrice() {

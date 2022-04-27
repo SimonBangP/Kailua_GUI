@@ -11,7 +11,10 @@ public class Customer {
     private String eMail;
     private String birthday;
 
-    public Customer(){}
+    public Customer() {
+
+    }
+
     public Customer(int customerID, String firstname, String lastname, int addressID, int phoneNumber, String eMail, String birthday) {
         this.customerID = customerID;
         this.firstname = firstname;
@@ -28,6 +31,10 @@ public class Customer {
 
     public void setCustomerID(int customerID) {
         this.customerID = customerID;
+    }
+
+    public boolean hasActiveRental() {
+        return false;
     }
 
     public String getFirstname() {
