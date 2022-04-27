@@ -1,5 +1,6 @@
 package com.example.kailua_gui.Controller;
 
+import com.example.kailua_gui.Model.Car;
 import com.example.kailua_gui.Model.Customer;
 import com.example.kailua_gui.Service.CarService;
 import com.example.kailua_gui.Service.CustomerService;
@@ -16,26 +17,20 @@ import java.util.List;
 public class CarController {
 
 
+    @Autowired
+    CarService service;
+
     @GetMapping("/car")
     public String car (Model model) {
-        List<Customer> customerList = CarService.getCar();
-        model.addAttribute("customers", customerList);
-        return "customer/customer";}
+        List<Car> carList = service.getCars();
+        model.addAttribute("customers", carList);
+        return "cars/cars";}
 
-    @GetMapping ("/createCustomer")
+    @GetMapping ("/createCar")
     public String create() {
-        return "customer/createCustomer";
-    }
-    @PostMapping("createCustomer")
-    public String create(@ModelAttribute Customer customer){
-        customerService.createNewCustomer(customer);
-        return "redirect:/";
+        return "car/createCar";
     }
 
-    @GetMapping("deleteCustomer")
-    public String delete(){
-        return "customer/deleteCustomer";
-    }
 
 }
 

@@ -46,13 +46,14 @@
         const button = document.getElementById('submit-button');
         
         button.addEventListener('click', async _ => {
-            let data = {Message: document.getElementById("issue-text").value};
             fetch("/feedback/create", {
                     method: "POST",
                     headers: {'Content-Type': 'application/json'}, 
                     body: document.getElementById("issue-text").value
                 }).then(res => {
                 console.log("Request complete! response:", res);
+
+                document.getElementById("issue-text").value = "";
             });
         });
     </script>
