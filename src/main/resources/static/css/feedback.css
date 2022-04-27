@@ -1,0 +1,55 @@
+
+#button-container {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#submit-button {
+    width: 14vw;
+    height: 5vh;
+}
+
+#action-help-text-container {
+    margin-top: 3%;
+
+    display: flex;
+    justify-content: center;
+}
+
+#action-help-text {
+    display: inline;
+    text-align: center;
+
+    font-size: larger;
+}
+
+#issue-container {
+    display: flex;
+
+    justify-content: center;
+}
+
+#issue-container textarea {
+    resize: none;
+
+    width: 50vw;
+    height: 35vh;
+
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#submit-container {
+    margin-top: 1%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+#title {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 2rem;
+}
