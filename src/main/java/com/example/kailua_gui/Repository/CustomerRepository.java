@@ -22,9 +22,9 @@ public class CustomerRepository {
         return template.query(sql, rowMapper);
    }
 
-    public void createNewCustomer (Customer customer){
-        String sql = "INSERT INTO customers (CustomerId, FirstName, LastName, addressId, PhoneNumber, Email, Birthday) VALUES(?, ?, ?, ?, ?, ?, ?)";
-        template.update(sql, customer.getCustomerID(),customer.getFirstname(), customer.getLastname(), customer.getAddressID(), customer.getPhoneNumber(), customer.geteMail(), customer.getBirthday());
+    public void createNewCustomer (Customer c){
+        String sql = "INSERT INTO customers (FirstName, LastName, addressId, PhoneNumber, Email, Birthday) VALUES(?, ?, ?, ?, ?, ?, ?)";
+        template.update(sql, c.getFirstname(), c.getLastname(), c.getAddressID(), c.getPhoneNumber(), c.geteMail(), c.getBirthday());
     }
 
     public void updateCurrentCustomer (Customer c, int customerID ){
