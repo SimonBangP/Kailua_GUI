@@ -25,6 +25,7 @@ public class CarRepository {
     public void createNewCar (Car car){}
     
     public void updateCurrentCar (Car car, String regNum ){}
+    
     public Boolean deleteCar (String regNum){
         String sql = "DELETE FROM cars_features cars WHERE RegistrationNumber = ?";
         deleteCarrental(regNum);
