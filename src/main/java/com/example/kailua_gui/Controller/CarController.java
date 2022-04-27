@@ -5,6 +5,7 @@ import com.example.kailua_gui.Service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,24 +19,33 @@ public class CarController {
     CarService carService;
 
     @GetMapping("/cars")
-    public String car (Model model) {
+    public String car(Model model) {
         List<Car> carList = carService.getCars();
         model.addAttribute("cars", carList);
-        return "cars/cars";}
+        return "cars/cars";
+    }
 
-    @GetMapping ("/createCar")
+    @GetMapping("/createCar")
     public String create() {
         return "cars/createCar";
     }
+
     @PostMapping("createCar")
-    public String create(@ModelAttribute Car car){
+    public String create(@ModelAttribute Car car) {
         carService.createNewCar(car);
         return "redirect:/";
     }
 
-    @GetMapping("deleteCar")
-    public String delete(){
+    @GetMapping("deleteCar/{registrationNumber}")
+    public String delete(@PathVariable("registrationNumber") String registrationNumber, Model model) {
+        Boolean delete;
         return "cars/deleteCar";
+    }
+
+    @GetMapping("/carDetails/{registrationNumber}")
+    public String viewSpecificCar(@PathVariable("registrationNumber") String registrationNumber, Model model) {
+        model.addAttribute("car", carService.findSpecificCar(registrationNumber));
+        return "cars/carDetails";
     }
 }
 
