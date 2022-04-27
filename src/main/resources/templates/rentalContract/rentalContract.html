@@ -49,7 +49,8 @@
                     <td th:text="${rentalContract.endDate}"></td>
                     <td th:text="${rentalContract.price}"></td>
                     <td th:text="${rentalContract.kilometers}"></td>
-                    <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                    <td class="dual-link-data"><a href="/">Details</a>
+                        <a th:href="@{'/deleteRentalContract/'+${rentalContract.rentalContractID}}">Remove</a></td>
                 </tr>
 
                 </tbody>

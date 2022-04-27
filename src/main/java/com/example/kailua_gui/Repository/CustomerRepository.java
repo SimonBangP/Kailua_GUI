@@ -32,9 +32,9 @@ public class CustomerRepository {
         template.update(sql, customer.getFirstname(), customer.getLastname(), customer.getAddressID(), customer.getPhoneNumber(), customer.geteMail(), customer.getCustomerID());
     }
 
-    public void deleteCustomer (int customerId){
+    public boolean deleteCustomer (int customerId){
         String sql = "DELETE FROM customers WHERE CustomerId = ?";
-        template.update(sql, customerId);
+       return template.update(sql, customerId) > 0;
     }
 
     public Customer findSpecificCustomer (int customerId){

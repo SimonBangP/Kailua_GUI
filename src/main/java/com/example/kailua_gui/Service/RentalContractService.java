@@ -28,8 +28,8 @@ public class RentalContractService {
         return rentalContractRepository.findSpecificRentalContract(rentalContractID);
     }
 
-    public void deleteRentalContract(int rentalContractID){
-        rentalContractRepository.deleteRentalContract(rentalContractID);}
+    public boolean deleteRentalContract(int rentalContractID){
+        return rentalContractRepository.deleteRentalContract(rentalContractID);}
 
     public void updateCurrentRentalContract(RentalContract rentalContract, int rentalContractID){
         rentalContractRepository.updateCurrentRentalContract(rentalContract, rentalContractID); }

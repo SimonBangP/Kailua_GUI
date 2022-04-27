@@ -35,9 +35,15 @@ public class CustomerController {
         return "redirect:/";
     }
 
-    @GetMapping("deleteCustomer")
-    public String delete(){
-        return "customer/deleteCustomer";
+    @GetMapping("/deleteCustomer/{customerID}")
+    public String deleteCustomer(@PathVariable ("customerID") int customerID){
+       Boolean delete = customerService.deleteCustomer(customerID);
+        if (delete){
+            return "redirect:/";
+        }else {
+            return "redirect:/";
+        }
+
     }
 
     @GetMapping ("customerDetails/{customerID}")

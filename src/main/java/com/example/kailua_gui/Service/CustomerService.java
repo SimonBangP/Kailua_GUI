@@ -23,6 +23,10 @@ public class CustomerService {
     public Customer findSpecificCustomer(int customerId){
         return customerRepository.findSpecificCustomer(customerId);
     }
-    public void deleteCustomer(int customerId){ customerRepository.deleteCustomer(customerId);}
+    public boolean deleteCustomer(int customerId){
+        return customerRepository.deleteCustomer(customerId);
+    }
+
+
     public void updateCurrentCustomer(Customer customer, int customerId){ customerRepository.updateCurrentCustomer(customer, customerId); }
 }

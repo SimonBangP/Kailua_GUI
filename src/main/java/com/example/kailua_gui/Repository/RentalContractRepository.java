@@ -30,9 +30,9 @@ public class RentalContractRepository {
 
     public void updateCurrentRentalContract (RentalContract rentalContract, int rentalContractID ){}
 
-    public void deleteRentalContract (int rentalContractID){
+    public boolean deleteRentalContract (int rentalContractID){
         String sql = "DELETE FROM rental_contracts WHERE Id = ?)";
-        template.update(sql, rentalContractID);
+        return template.update(sql, rentalContractID) > 0;
     }
 
     public RentalContract findSpecificRentalContract (int rentalContractID){

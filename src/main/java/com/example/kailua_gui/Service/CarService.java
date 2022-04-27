@@ -22,7 +22,10 @@ public class CarService {
         return CarRepository.findSpecificCar(registrationNumber);
     }
     public boolean deleteCar(String registrationNumber){
+
         return CarRepository.deleteCar(registrationNumber);
     }
+
     public void updateCurrentCar(Car car, String registrationNumber){ CarRepository.updateCurrentCar(car, registrationNumber); }
 }
+
