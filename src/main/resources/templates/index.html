@@ -12,32 +12,37 @@
 
 </head>
 <body>
-<div class="header">
-    <div id="header-icon">
-        <img src="Images/kailuaLogo.png"/>
+    <div class="header">
+        <div id="header-icon">
+            <img src="Images/kailuaLogo.png"/>
+        </div>
+        <div id="header-buttons-container">
+            <table id="header-buttons">
+                <th>Cars</th>
+                <th>Rentals</th>
+                <th>Customers</th>
+                <th>Report a bug</th>
+            </table>
+        </div>
     </div>
-    <div id="header-buttons-container">
-        <table id="header-buttons">
-            <th>Cars</th>
-            <th>Rentals</th>
-            <th>Customers</th>
-            <th>Report a bug</th>
-        </table>
+    <div id="title">
+        <h1>Kailua Car Rental Administration System</h1>
     </div>
-</div>
-<div class="button-container">
-    <div class="menu-button" onclick="window.location.href='/car'">
-        <span class="material-icons" style="font-size: 6rem">directions_car</span>
-        <p style="margin-top: 0px; font-size: 21px;">Cars</p>
+    <div id="action-help-text-container">
+        <div id="action-help-text">
+            <p>Select an option below to proceed</p>
+        </div>
+    </div>  
+    <div class="button-container">
+        <div class="menu-button" onclick="window.location.href='/car'">
+            <p>View cars in repository</p>
+        </div>
+        <div class="menu-button" onclick="window.location.href='/customer'">
+            <p>Active Rentals</p>
+        </div>
+        <div class="menu-button" onclick="window.location.href='/rentalContract'">
+            <p>Customer administration</p>
+        </div>
     </div>
-    <div class="menu-button" onclick="window.location.href='/customer'">
-        <span class="material-icons" style="font-size: 6rem">person</span>
-        <p style="margin-top: 0px; font-size: 21px;">Customers</p>
-    </div>
-    <div class="menu-button" onclick="window.location.href='/rentalContract'">
-        <span class="material-icons" style="font-size: 6rem">car_rental</span>
-        <p style="margin-top: 0px; font-size: 21px;">RentalContracts</p>
-    </div>
-</div>
 </body>
 </html>
