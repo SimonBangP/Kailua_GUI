@@ -23,13 +23,13 @@ public class CustomerRepository {
    }
 
     public void createNewCustomer (Customer customer){
-        String sql = "INSERT INTO customers (CustomerId, FirstName, LastName, AddressId, PhoneNumber, Email, Birthday) VALUES(?, ?, ?, ?, ?, ?, ?)";
-        template.update(sql, customer.getCustomerID(), customer.getFirstname(), customer.getLastname(), customer.getAddressID(), customer.getPhoneNumber(), customer.geteMail(), customer.getBirthday());
+        String sql = "INSERT INTO customers (CustomerId, FirstName, LastName, addressId, PhoneNumber, Email, Birthday) VALUES(?, ?, ?, ?, ?, ?, ?)";
+        template.update(sql, customer.getCustomerID(),customer.getFirstname(), customer.getLastname(), customer.getAddressID(), customer.getPhoneNumber(), customer.geteMail(), customer.getBirthday());
     }
 
-    public void updateCurrentCustomer (Customer customer, int customerID ){
+    public void updateCurrentCustomer (Customer c, int customerID ){
         String sql = "UPDATE customers Set FirstName = ?, LastName = ?, AddressId = ?, PhoneNumber = ?, Email = ? WHERE CustomerId = ?";
-        template.update(sql, customer.getFirstname(), customer.getLastname(), customer.getAddressID(), customer.getPhoneNumber(), customer.geteMail(), customer.getCustomerID());
+        template.update(sql, c.getFirstname(), c.getLastname(), c.getAddressID(), c.getPhoneNumber(), c.geteMail(), c.getCustomerID());
     }
 
     public boolean deleteCustomer (int customerId){

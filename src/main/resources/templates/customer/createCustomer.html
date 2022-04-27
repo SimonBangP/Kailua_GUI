@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Shared.css">
+    <link rel="stylesheet" href="css/repositoryShared.css">
     <title>Add new customer</title>
+    <style>
+        input {
+            font-size: 16px;
+        }
+    </style>
+
 </head>
 <body>
 <h1>Create a new Customer</h1>
-<div class="button-container">
-    <div class="menu-button" onclick="window.location.href='/customer'">
-        <span class="material-icons">Go back</span>
-    </div>
+
+<form action="/createCustomer" method="post">
+<input type="text" name="customerID" placeholder="Customer ID">         <br>
+<input type="text" name="firstName" placeholder="Enter firstName">      <br>
+<input type="text" name="lastName" placeholder="Enter lastName">        <br>
+<input type="text" name="AddressId" placeholder="Enter Address ID">     <br>
+<input type="text" name="PhoneNumber" placeholder="Enter Phone Number"> <br>
+<input type="text" name="Email" placeholder="Email">                    <br>
+<input type="text" name="Birthday" placeholder="Enter Birthday">        <br>
+
+<input type="submit" value="Save" class="table-button-container">
+
+    <div class="table-button-container">
+        <div class="menu-button table-button">
+            <a href="/customer">Go Back</a>
+
+        </div>
+</form>
 </body>
 </html>
