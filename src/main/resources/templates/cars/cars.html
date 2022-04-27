@@ -48,7 +48,8 @@
                             <td th:text="${car.registrationNumber}"></td>
                             <td th:text="${car.carType}"></td>
                             <td><span class="material-symbols-outlined">help</span></td>
-                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                            <td class="dual-link-data"><a th:href="@{'/carDetails/'+${car.registrationNumber}}">Details</a>
+                                <a href="/">Remove</a></td>
                         </tr>
 
                     </tbody>

@@ -29,7 +29,11 @@ public class CarRepository {
     public void deleteCar (String regNum){}
     
     public Car findSpecificCar (String regNum){
-        return null;
+
+        String sql = "SELECT * FROM cars WHERE RegistrationNumber = ?";
+        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        Car car = template.queryForObject(sql, rowMapper, regNum);
+        return car;
     }
     
     
