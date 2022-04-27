@@ -43,7 +43,7 @@
                     <td th:text="${customer.firstname}"></td>
                     <td th:text="${customer.lastname}"></td>
                     <td th:text="${customer.phoneNumber}"></td>
-                    <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                    <td class="dual-link-data"><a th:href="@{'/customerDetails/'+${customer.customerID}}">Details</a><a href="/">Remove</a></td>
                 </tr>
 
                 </tbody>
