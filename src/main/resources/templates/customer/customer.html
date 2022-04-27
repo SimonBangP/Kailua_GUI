@@ -3,40 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/repositoryShared.css">
     <title>Title</title>
 </head>
 <body>
-    <h1>All customers</h1>
-
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>First name</th>
-            <th>Last name</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="customer: ${customers}">
-            <td th:text="${customer.customerID}"></td>
-            <td th:text="${customer.firstname}"></td>
-            <td th:text="${customer.lastname}"></td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="button-container">
-        <div class="menu-button" onclick="window.location.href='/'">
-            <span class="material-icons">Go back</span>
+    <div class="header">
+        <div id="header-icon">
+            <img src="Images/kailuaLogo.png"/>
+        </div>
+        <div id="header-buttons-container">
+            <table id="header-buttons">
+                <th onclick="window.location.href='/cars'">Cars</th>
+                <th onclick="window.location.href='/rentalContract'">Rentals</th>
+                <th onclick="window.location.href='/customer'">Customers</th>
+                <th onclick="window.location.href='/feedback'">Report a bug</th>
+            </table>
         </div>
     </div>
-    <div class="button-container">
-        <div class="menu-button" onclick="window.location.href='/createCustomer'">
-            <span class="material-icons">Add new customer</span>
+    <div class="body-container">
+        <div class="table-title">
+            <h1>Customers</h1>
         </div>
-    </div>
-    <div class="button-container">
-        <div class="menu-button" onclick="window.location.href='/deleteCustomer'">
-            <span class="material-icons">Delete customer</span>
+        <div class="table-container">
+            <div class="menu-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Birthday</th>
+                            <th>Active rental</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lars Madsen</td>
+                            <td>+452039928</td>
+                            <td>11/01/1988</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tom Stavgaard</td>
+                            <td>+28374458</td>
+                            <td>15/12/1995</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Kim Larsen</td>
+                            <td>+4599182773</td>
+                            <td>23/10/1945</td>
+                            <td>No</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Justin Mikkelsen</td>
+                            <td>+4545411712</td>
+                            <td>01/06/1999</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-button-container">
+                <div class="menu-button table-button">
+                    <p>Add new customer</p>
+                </div>
+                <div class="menu-button table-button">
+                    <p>Export .csv</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

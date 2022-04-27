@@ -18,10 +18,10 @@
         </div>
         <div id="header-buttons-container">
             <table id="header-buttons">
-                <th>Cars</th>
-                <th>Rentals</th>
-                <th>Customers</th>
-                <th>Report a bug</th>
+                <th onclick="window.location.href='/cars'">Cars</th>
+                <th onclick="window.location.href='/rentalContract'">Rentals</th>
+                <th onclick="window.location.href='/customer'">Customers</th>
+                <th onclick="window.location.href='/feedback'">Report a bug</th>
             </table>
         </div>
     </div>
@@ -33,14 +33,14 @@
             <p>Select an option below to proceed</p>
         </div>
     </div>  
-    <div class="button-container">
-        <div class="menu-button" onclick="window.location.href='/car'">
+    <div id="button-container">
+        <div id="main-button" class="menu-button" onclick="window.location.href='/car'">
             <p>View cars in repository</p>
         </div>
-        <div class="menu-button" onclick="window.location.href='/customer'">
+        <div id="main-button" class="menu-button" onclick="window.location.href='/customer'">
             <p>Active Rentals</p>
         </div>
-        <div class="menu-button" onclick="window.location.href='/rentalContract'">
+        <div id="main-button" class="menu-button" onclick="window.location.href='/rentalContract'">
             <p>Customer administration</p>
         </div>
     </div>

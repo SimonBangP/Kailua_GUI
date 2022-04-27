@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class CarController {
 
 
-    @GetMapping ("/car")
+    @GetMapping ("/cars")
     public String car (){
-        return "car";}
+        return "cars/cars";}
 }

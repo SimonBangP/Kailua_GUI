@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/repositoryShared.css">
+    <link rel="stylesheet" href="css/cars.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="header">
+        <div id="header-icon">
+            <img src="Images/kailuaLogo.png"/>
+        </div>
+        <div id="header-buttons-container">
+            <table id="header-buttons">
+                <th onclick="window.location.href='/cars'">Cars</th>
+                <th onclick="window.location.href='/rentalContract'">Rentals</th>
+                <th onclick="window.location.href='/customer'">Customers</th>
+                <th onclick="window.location.href='/feedback'">Report a bug</th>
+            </table>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="table-title">
+            <h1>Cars in repository</h1>
+        </div>
+        <div class="table-container">
+            <div class="menu-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Registration</th>
+                            <th>Type</th>
+                            <th>Available</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Range Rover</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>HK45472</td>
+                            <td>Luxury</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tesla Model 3</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>AK20599</td>
+                            <td>Sport</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Honda Civic</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>LV20493</td>
+                            <td>Family</td>
+                            <td>No</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>BMW Electric</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>BM20112</td>
+                            <td>Family</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Audi A3</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>AK49576</td>
+                            <td>Sport</td>
+                            <td>No</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>VW Golf GTI</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>GH37564</td>
+                            <td>Sport</td>
+                            <td>Yes</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Ferrari LaFerrari</td>
+                            <td><span class="material-symbols-outlined">help</span></td>
+                            <td>SF42945</td>
+                            <td>Luxury</td>
+                            <td>No</td>
+                            <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-button-container">
+                <div class="menu-button table-button">
+                    <p>Add new car</p>
+                </div>
+                <div class="menu-button table-button">
+                    <p>Export .csv</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

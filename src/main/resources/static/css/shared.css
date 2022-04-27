@@ -74,6 +74,26 @@ body{
     border-bottom: 2px solid lightgray;
 }
 
-tr:nth-child(even) {
-    background-color: lightgray;
+.menu-button {
+    background: lightgray;
+    border-radius: 10px;
+    border: 2px solid black;
+
+    font-size: larger;
+    font-weight: bolder;
+
+    cursor: pointer;
+    transition: ease 250ms;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.menu-button:hover {
+    background: gray;
 }
