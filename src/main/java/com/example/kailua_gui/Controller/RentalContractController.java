@@ -39,7 +39,7 @@ public class RentalContractController {
 
     @GetMapping("/deleteRentalContract/{rentalContractID}")
     public String delete(@PathVariable ("rentalContractID") int rentalContractID){
-        boolean delete = rentalContractService.deleteRentalContract(rentalContractID);
+        Boolean delete = rentalContractService.deleteRentalContract(rentalContractID);
         if (delete){
             return "redirect:/";
         }else {

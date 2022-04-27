@@ -31,7 +31,7 @@ public class RentalContractRepository {
     public void updateCurrentRentalContract (RentalContract rentalContract, int rentalContractID ){}
 
     public boolean deleteRentalContract (int rentalContractID){
-        String sql = "DELETE FROM rental_contracts WHERE Id = ?)";
+        String sql = "DELETE FROM rental_contracts WHERE rentalContractID = ?";
         return template.update(sql, rentalContractID) > 0;
     }
 
