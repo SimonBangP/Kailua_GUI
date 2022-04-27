@@ -25,7 +25,7 @@ public class RentalContractRepository {
 
     public void createNewRentalContract (RentalContract rC){
         String sql = "INSERT INTO rental_contracts (RegistrationNumber, CustomerId, StartDateTime,EndDateTime, Price, Kilometers) VALUES(?, ?, ?, ?, ?, ?)";
-        template.update(sql, rC.getRentalContractID(), rC.getRegistrationNumber(), rC.getCustomerID(), rC.getStartDateTime(), rC.getEndDateTime(), rC.getPrice(), rC.getKilometers());
+        template.update(sql, rC.getRentalContractID(), rC.getRegistrationNumber(), rC.getCustomerID(), rC.getStartDate(), rC.getEndDate(), rC.getPrice(), rC.getKilometers());
     }
 
     public void updateCurrentRentalContract (RentalContract rentalContract, int rentalContractID ){}

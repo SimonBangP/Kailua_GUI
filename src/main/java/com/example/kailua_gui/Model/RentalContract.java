@@ -1,31 +1,31 @@
 package com.example.kailua_gui.Model;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 public class RentalContract {
 
 
-    private int RentalContractID;
+    private int rentalContractID;
     private String registrationNumber; 
     private int customerID; 
-    private Timestamp startDateTime; 
-    private Timestamp endDateTime;
+    private Date startDate;
+    private Date endDate;
     private double price; 
     private int kilometers;
 
     public RentalContract(){}
-    public RentalContract(int id, String registrationNumber, int customerID, Timestamp startDateTime, Timestamp endDateTime, double price, int kilometers) {
-        this.RentalContractID = id;
+    public RentalContract(int rentalContractID, String registrationNumber, int customerID, Date startDate, Date endDate, double price, int kilometers) {
+        this.rentalContractID = rentalContractID;
         this.registrationNumber = registrationNumber;
         this.customerID = customerID;
-        this.startDateTime = startDateTime;
-        this.endDateTime = endDateTime;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.price = price;
         this.kilometers = kilometers;
     }
 
-    public int getRentalContractID() {return RentalContractID;}
-    public void setRentalContractID(int rentalContractID) {this.RentalContractID = rentalContractID;}
+    public int getRentalContractID() {return rentalContractID;}
+    public void setRentalContractID(int rentalContractID) {this.rentalContractID = rentalContractID;}
 
     public String getRegistrationNumber() {
         return registrationNumber;
@@ -41,18 +41,18 @@ public class RentalContract {
         this.customerID = customerID;
     }
 
-    public Timestamp getStartDateTime() {
-        return startDateTime;
+    public Date getStartDate() {
+        return startDate;
     }
-    public void setStartDateTime(Timestamp startDateTime) {
-        this.startDateTime = startDateTime;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Timestamp getEndDateTime() {
-        return endDateTime;
+    public Date getEndDate() {
+        return endDate;
     }
-    public void setEndDateTime(Timestamp endDateTime) {
-        this.endDateTime = endDateTime;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public double getPrice() {
