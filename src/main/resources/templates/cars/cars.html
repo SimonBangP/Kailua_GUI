@@ -48,7 +48,7 @@
                             <td th:text="${car.registrationNumber}"></td>
                             <td th:text="${car.carType}"></td>
                             <td><span class="material-symbols-outlined">help</span></td>
-                            <td class="dual-link-data"><a th:href="@{'/carDetails/'+${car.registrationNumber}}">Details</a>
+                            <td class="dual-link-data"><a th:href="@{'/carDetail/'+${car.registrationNumber}}">Details</a>
                                 <a href="/">Remove</a></td>
                         </tr>
 
@@ -65,7 +65,6 @@
             </div>
 
             <div id="myModal" class="modal">
-
                 <!-- Modal content -->
                 <div class="modal-content">
                     <div class="modal-header">
