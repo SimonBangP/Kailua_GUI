@@ -14,11 +14,15 @@
 
 /* Modal Content */
 .modal-content {
+    /* centering stuff */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 15vw;
+
     background-color: #fefefe;
-    margin: 5vw;
     border: 1px solid #888;
-    width: auto;
-    height: 40vw;
+    width: 500px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
@@ -27,19 +31,18 @@
 /* Add Animation */
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    to {top: 15vw; opacity: 1}
 }
 
 .modal-header {padding: 2px 16px;}
 .modal-body {
-    padding: 2px 16px;
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    height: 400px;
 }
 
 #create-car-frame {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 /* The Close Button */
@@ -56,3 +59,8 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.body-container {
+    margin: 5%;
+}
+

@@ -2,33 +2,35 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/shared.css">
-    <link rel="stylesheet" href="css/repositoryShared.css">
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Create Car</title>
 </head>
 
-<div class="body-container" style="position: relative; height: auto">
+<div class="body-container" style="position: relative; height: 320px">
     <div class="title">
         <h1>Add car to repository</h1>
     </div>
-    <label for="lplate">Licence plate: </label>
-    <input type="text" id="lplate" style="right: 5px;" name="lplate"><br><br>
-    <label for="cars">Car type:      </label>
-    <select name="cars" id="cars">
-        <option value="Family">Family</option>
-        <option value="Sport">Sport</option>
-        <option value="Luxury">Luxury</option>
-    </select><br><br>
-    <label for="kmprice">Price per kilometer: </label>
-    <input type="text" id="kmprice" name="kmprice"><br><br>
-    <label for="imglink">Link to image of car: </label>
-    <input type="text" id="imglink" name="imglink"><br><br>
-    <div class="button-container">
-        <div class="menu-button" onclick="">
-            <span class="material-icons">Create car</span>
+    <form id="carform" action="/createCar" method="post">
+        <label for="lplate">Licence plate: </label>
+        <input type="text" id="lplate" style="position: absolute; right: 5px; width: 170px" name="lplate"><br><br>
+        <label for="cars">Car type:      </label>
+        <select name="cars" id="cars" style="position: absolute; right: 5px; width: 178px" >
+            <option value="Family">Family</option>
+            <option value="Sport">Sport</option>
+            <option value="Luxury">Luxury</option>
+        </select><br><br>
+        <label for="kmprice">Price per kilometer: </label>
+        <input type="text" id="kmprice" name="kmprice" style="position: absolute; right: 5px; width: 170px" ><br><br>
+        <label for="imglink">Link to image of car: </label>
+        <input type="text" id="imglink" name="imglink" style="position: absolute; right: 5px; width: 170px" ><br><br>
+        <input type="checkbox" id="confirmation" name="confirmation">
+        <label for="confirmation">I have verified that the above information is correct</label>
+        <div class="menu-button" onclick="document.getElementById('carform').submit();" style="position: absolute; bottom: 0px;">
+            <span class="material-icons">Add car</span>
         </div>
-    </div>
+    </form>
 </div>
 
 
