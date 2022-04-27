@@ -17,7 +17,7 @@ public class CarController {
     @Autowired
     CarService carService;
 
-    @GetMapping("/car")
+    @GetMapping("/cars")
     public String car (Model model) {
         List<Car> carList = carService.getCars();
         model.addAttribute("cars", carList);
