@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Forside</title>
+
+</head>
+<body>
+    <div class="header">
+        <div id="header-icon">
+            <img src="Images/kailuaLogo.png"/>
+        </div>
+        <div id="header-buttons-container">
+            <table id="header-buttons">
+                <th onclick="window.location.href='/cars'">Cars</th>
+                <th onclick="window.location.href='/rentalContract'">Rentals</th>
+                <th onclick="window.location.href='/customer'">Customers</th>
+                <th onclick="window.location.href='/feedback'">Report a bug</th>
+            </table>
+        </div>
+    </div>
+    <div id="title">
+        <h1>Oh no! - What can we improve?</h1>
+    </div>
+    <div id="action-help-text-container">
+        <div id="action-help-text">
+            <p>Please type a detailed description of your issue, and we will examine it asap</p>
+        </div>
+    </div>  
+    <div id="issue-container">
+        <textarea id="issue-text" name="issueText"></textarea>
+    </div>
+    <div id="submit-container">
+        <div id="submit-button" class="menu-button">
+            <p>Submit report</p>
+        </div>
+    </div>
+    
+    <script>
+        const button = document.getElementById('submit-button');
+        
+        button.addEventListener('click', async _ => {
+            let data = {Message: document.getElementById("issue-text").value};
+            fetch("/feedback/create", {
+                    method: "POST",
+                    headers: {'Content-Type': 'application/json'}, 
+                    body: document.getElementById("issue-text").value
+                }).then(res => {
+                console.log("Request complete! response:", res);
+            });
+        });
+    </script>
+</body>
+</html>
