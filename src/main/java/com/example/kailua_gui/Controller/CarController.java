@@ -37,7 +37,7 @@ public class CarController {
     }
 
     @GetMapping("/deleteCar/{registrationNumber}")
-    public String delete(@PathVariable("registrationNumber") String registrationNumber) {
+    public String deleteCar(@PathVariable("registrationNumber") String registrationNumber) {
         Boolean delete = carService.deleteCar(registrationNumber);
         if (delete){
             return "redirect:/";
