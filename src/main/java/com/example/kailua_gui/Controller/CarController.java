@@ -1,8 +1,7 @@
 package com.example.kailua_gui.Controller;
 
-import com.example.kailua_gui.Model.Customer;
+import com.example.kailua_gui.Model.Car;
 import com.example.kailua_gui.Service.CarService;
-import com.example.kailua_gui.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,27 +14,28 @@ import java.util.List;
 @Controller
 public class CarController {
 
+    @Autowired
+    CarService carService;
 
     @GetMapping("/car")
     public String car (Model model) {
-        List<Customer> customerList = CarService.getCar();
-        model.addAttribute("customers", customerList);
-        return "customer/customer";}
+        List<Car> carList = carService.getCars();
+        model.addAttribute("cars", carList);
+        return "cars/cars";}
 
-    @GetMapping ("/createCustomer")
+    @GetMapping ("/createCar")
     public String create() {
-        return "customer/createCustomer";
+        return "cars/createCar";
     }
-    @PostMapping("createCustomer")
-    public String create(@ModelAttribute Customer customer){
-        customerService.createNewCustomer(customer);
+    @PostMapping("createCar")
+    public String create(@ModelAttribute Car car){
+        carService.createNewCar(car);
         return "redirect:/";
     }
 
-    @GetMapping("deleteCustomer")
+    @GetMapping("deleteCar")
     public String delete(){
-        return "customer/deleteCustomer";
+        return "cars/deleteCar";
     }
-
 }
 
