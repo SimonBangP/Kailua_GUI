@@ -43,7 +43,7 @@ public class CustomerController {
     @GetMapping ("customerDetails/{customerID}")
     public String viewSpecificCustomer (@PathVariable ("customerID") int customerID, Model model){
     model.addAttribute("customer", customerService.findSpecificCustomer(customerID));
-    return "customer/customerDefails";
+    return "customer/customerDetails";
     }
 }
 
