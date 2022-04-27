@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/repositoryShared.css">
+    <link rel="stylesheet" href="css/cars.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>rentalContract</title>
 </head>
-<body>
+<body><div class="header">
+    <div id="header-icon">
+        <img src="Images/kailuaLogo.png"/>
+    </div>
+    <div id="header-buttons-container">
+        <table id="header-buttons">
+            <th onclick="window.location.href='/cars'">Cars</th>
+            <th onclick="window.location.href='/rentalContract'">Rentals</th>
+            <th onclick="window.location.href='/customer'">Customers</th>
+            <th onclick="window.location.href='/feedback'">Report a bug</th>
+        </table>
+    </div>
+</div>
+<div class="body-container">
+    <div class="table-title">
+        <h1>Rental Contracts</h1>
+    </div>
+    <div class="table-container">
+        <div class="menu-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>Rental Contract ID</th>
+                    <th>Registration Number</th>
+                    <th>Customer ID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Price <br> Pr KM</th>
+                    <th>Kilometers <br>in rentalperiod</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="rentalContract: ${rentalContracts}">
+                    <td th:text="${rentalContract.rentalContractID}"></td>
+                    <td th:text="${rentalContract.RegistrationNumber}"></td>
+                    <td th:text="${rentalContract.customerID}"></td>
+                    <td th:text="${rentalContract.startDate}"></td>
+                    <td th:text="${rentalContract.endDate}"></td>
+                    <td th:text="${rentalContract.price}"></td>
+                    <td th:text="${rentalContract.kilometers}"></td>
+                    <td class="dual-link-data"><a href="/">Details</a><a href="/">Remove</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="table-button-container">
+            <div class="menu-button table-button">
+                <p>Add new customer</p>
+            </div>
+            <div class="menu-button table-button">
+                <p>Export .csv</p>
+            </div>
+        </div>
+    </div>
+</div>
 <h1>Rental Contracts</h1>
 
 <table>
@@ -16,7 +75,7 @@
         <th>Customer ID</th>
         <th>Start Date</th>
         <th>End Date</th>
-        <th>Price</th>
+        <th>Price <br> Per Kilometers</th>
         <th>Kilometers</th>
     </tr>
     </thead>

@@ -1,12 +1,11 @@
 package com.example.kailua_gui.Model;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 
 public class RentalContract {
 
 
-    private int RentalContractID;
+    private int rentalContractID;
     private String registrationNumber; 
     private int customerID; 
     private Date startDate;
@@ -15,8 +14,8 @@ public class RentalContract {
     private int kilometers;
 
     public RentalContract(){}
-    public RentalContract(int id, String registrationNumber, int customerID, Date startDate, Date endDate, double price, int kilometers) {
-        this.RentalContractID = id;
+    public RentalContract(int rentalContractID, String registrationNumber, int customerID, Date startDate, Date endDate, double price, int kilometers) {
+        this.rentalContractID = rentalContractID;
         this.registrationNumber = registrationNumber;
         this.customerID = customerID;
         this.startDate = startDate;
@@ -25,8 +24,8 @@ public class RentalContract {
         this.kilometers = kilometers;
     }
 
-    public int getRentalContractID() {return RentalContractID;}
-    public void setRentalContractID(int rentalContractID) {this.RentalContractID = rentalContractID;}
+    public int getRentalContractID() {return rentalContractID;}
+    public void setRentalContractID(int rentalContractID) {this.rentalContractID = rentalContractID;}
 
     public String getRegistrationNumber() {
         return registrationNumber;
@@ -52,7 +51,7 @@ public class RentalContract {
     public Date getEndDate() {
         return endDate;
     }
-    public void setEndDateTime(Date endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
