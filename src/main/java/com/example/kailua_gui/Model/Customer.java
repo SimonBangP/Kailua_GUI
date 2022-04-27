@@ -11,9 +11,7 @@ public class Customer {
     private String eMail;
     private String birthday;
 
-    public Customer() {
-
-    }
+    public Customer() {}
 
     public Customer(int customerID, String firstname, String lastname, int addressID, int phoneNumber, String eMail, String birthday) {
         this.customerID = customerID;
