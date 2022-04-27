@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid;
+}
+td:nth-child(even), th:nth-child(even){
+    background-color: lightblue;
+}
+
+#return-button {
+    background-color: green;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
