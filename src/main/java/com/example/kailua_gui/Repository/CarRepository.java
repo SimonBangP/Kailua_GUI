@@ -3,7 +3,9 @@ package com.example.kailua_gui.Repository;
 
 import com.example.kailua_gui.Model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +17,9 @@ public class CarRepository {
     JdbcTemplate template; 
     
     public List<Car> getCars (){
-        return null;
+        String sql = "SELECT * FROM cars";
+        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        return template.query(sql, rowMapper);
     }
     
     public void createNewCar (Car car){}
