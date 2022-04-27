@@ -36,10 +36,14 @@ public class CarController {
         return "redirect:/";
     }
 
-    @GetMapping("deleteCar/{registrationNumber}")
-    public String delete(@PathVariable("registrationNumber") String registrationNumber, Model model) {
-        Boolean delete;
-        return "cars/deleteCar";
+    @GetMapping("/deleteCar/{registrationNumber}")
+    public String delete(@PathVariable("registrationNumber") String registrationNumber) {
+        Boolean delete = carService.deleteCar(registrationNumber);
+        if (delete){
+            return "redirect:/";
+        }else {
+            return "redirect:/";
+        }
     }
 
     @GetMapping("/carDetails/{registrationNumber}")

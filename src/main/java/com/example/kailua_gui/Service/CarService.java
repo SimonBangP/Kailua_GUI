@@ -21,6 +21,8 @@ public class CarService {
     public Car findSpecificCar(String registrationNumber){
         return CarRepository.findSpecificCar(registrationNumber);
     }
-    public void deleteCustomer(String registrationNumber){ CarRepository.deleteCar(registrationNumber);}
-    public void updateCurrentCustomer(Car car, String registrationNumber){ CarRepository.updateCurrentCar(car, registrationNumber); }
+    public boolean deleteCar(String registrationNumber){
+        return CarRepository.deleteCar(registrationNumber);
+    }
+    public void updateCurrentCar(Car car, String registrationNumber){ CarRepository.updateCurrentCar(car, registrationNumber); }
 }

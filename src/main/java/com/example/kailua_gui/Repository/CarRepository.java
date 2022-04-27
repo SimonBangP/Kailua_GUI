@@ -26,7 +26,10 @@ public class CarRepository {
     
     public void updateCurrentCar (Car car, String regNum ){}
     
-    public void deleteCar (String regNum){}
+    public Boolean deleteCar (String regNum){
+        String sql = "DELETE FROM cars WHERE RegistrationNumber = ?";
+        return template.update(sql, regNum) > 0;
+    }
     
     public Car findSpecificCar (String regNum){
 
@@ -35,6 +38,4 @@ public class CarRepository {
         Car car = template.queryForObject(sql, rowMapper, regNum);
         return car;
     }
-    
-    
 }
