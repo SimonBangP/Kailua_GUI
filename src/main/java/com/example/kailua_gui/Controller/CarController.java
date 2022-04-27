@@ -10,4 +10,8 @@ public class CarController {
     @GetMapping ("/cars")
     public String car (){
         return "cars/cars";}
+
+    @GetMapping("/cars/create")
+    public String createCar (){
+        return "cars/createCar";}
 }
