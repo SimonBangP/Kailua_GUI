@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Shared.css">
-    <title>Add new car</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/repositoryShared.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Create Car</title>
 </head>
-<body>
-<h1>Create a new car</h1>
-<div class="button-container">
-    <div class="menu-button" onclick="window.location.href='/cars.html'">
-        <span class="material-icons">Go back</span>
+
+<div class="body-container" style="position: relative; height: auto">
+    <div class="title">
+        <h1>Add car to repository</h1>
     </div>
+    <label for="lplate">Licence plate: </label>
+    <input type="text" id="lplate" style="right: 5px;" name="lplate"><br><br>
+    <label for="cars">Car type:      </label>
+    <select name="cars" id="cars">
+        <option value="Family">Family</option>
+        <option value="Sport">Sport</option>
+        <option value="Luxury">Luxury</option>
+    </select><br><br>
+    <label for="kmprice">Price per kilometer: </label>
+    <input type="text" id="kmprice" name="kmprice"><br><br>
+    <label for="imglink">Link to image of car: </label>
+    <input type="text" id="imglink" name="imglink"><br><br>
+    <div class="button-container">
+        <div class="menu-button" onclick="">
+            <span class="material-icons">Create car</span>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

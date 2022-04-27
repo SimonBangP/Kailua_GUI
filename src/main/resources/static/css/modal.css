@@ -15,10 +15,10 @@
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: auto;
-    padding: 0;
+    margin: 5vw;
     border: 1px solid #888;
-    width: 25vw;
+    width: auto;
+    height: 40vw;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
@@ -31,7 +31,11 @@
 }
 
 .modal-header {padding: 2px 16px;}
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    padding: 2px 16px;
+    width: 95%;
+    height: 95%;
+}
 
 #create-car-frame {
     width: 100%;

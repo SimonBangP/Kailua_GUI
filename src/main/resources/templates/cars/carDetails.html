@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/repositoryShared.css">
+    <link rel="stylesheet" href="css/cars.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta charset="UTF-8">
+
+    <title>carDetails</title>
+</head>
+<body>
+<div class="header">
+    <div id="header-icon">
+        <img id="menu-icon" src="Images/kailuaLogo.png" onclick="window.location.href='/'"/>
+    </div>
+    <div id="header-buttons-container">
+        <table id="header-buttons">
+            <th onclick="window.location.href='/cars'">Cars</th>
+            <th onclick="window.location.href='/rentalContract'">Rentals</th>
+            <th onclick="window.location.href='/customer'">Customers</th>
+            <th onclick="window.location.href='/feedback'">Report a bug</th>
+        </table>
+    </div>
+</div>
+<div class="body-container">
+    <div class="table-title">
+        <h1>Cars in repository</h1>
+    </div>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Registration Nmber</th>
+        <th>Car Type</th>
+        <th>Car Brand</th>
+        <th>Car Model</th>
+        <th>Car Variant</th>
+        <th>Price Per Kilometers</th>
+        <th>Engine Size</th>
+        <th>Horse Power</th>
+        <th>Fuel Type</th>
+        <th>First Registration Date</th>
+        <th>Odometer</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${car.registrationNumber}"></td>
+        <td th:text="${car.carType}"></td>
+        <td th:text="${car.brand}"></td>
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.variant}"></td>
+        <td th:text="${car.pricePerKilometer}"></td>
+        <td th:text="${car.engineSize}"></td>
+        <td th:text="${car.horsePower}"></td>
+        <td th:text="${car.fuelType}"></td>
+        <td th:text="${car.registrationDate}"></td>
+        <td th:text="${car.odometer}"></td>
+
+
+        <td><span class="material-symbols-outlined">help</span></td>
+        <td class="dual-link-data"><a th:href="@{'/carDetails/'+${car.registrationNumber}}">Details</a>
+            <a href="/">Remove</a></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+<span th:text="${car.registrationNumber}"/>
+<span th:text="${car.carType}"/>
+<span th:text="${car.brand}"/>
+<span th:text="${car.model}"/>
+<span th:text="${car.variant}"/>
+<span th:text="${car.pricePerKilometer}"/>
+<span th:text="${car.engineSize}"/>
+<span th:text="${car.horsePower}"/>
+<span th:text="${car.fuelType}"/>
+<span th:text="${car.registrationDate}"/>
+<span th:text="${car.odometer}"/>
+
+</body>
+/html>
