@@ -27,7 +27,7 @@ public class CarRepository {
     public void updateCurrentCar (Car car, String regNum ){}
     
     public Boolean deleteCar (String regNum){
-        String sql ="DELETE FROM cars_features cars WHERE RegistrationNumber = ?";
+        String sql ="DELETE FROM cars WHERE RegistrationNumber = ?";
         return template.update(sql, regNum) > 0;
     }
     
