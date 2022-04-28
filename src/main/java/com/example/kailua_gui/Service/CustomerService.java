@@ -13,10 +13,9 @@ public class CustomerService {
     CustomerRepository customerRepository;
 
     public List<Customer> getCustomers(){
-
         return customerRepository.getCustomers();
-
     }
+
     public void createNewCustomer(Customer customer){
         customerRepository.createNewCustomer(customer);
     }
