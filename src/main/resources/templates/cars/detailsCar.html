@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/repositoryShared.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <title>Car Details</title>
+</head>
+<body>
+    <div class="header">
+        <div id="header-icon">
+            <img id="menu-icon" src="../images/kailuaLogo.png" onclick="window.location.href='/'"/>
+        </div>
+        <div id="header-buttons-container">
+            <table id="header-buttons">
+                <th onclick="window.location.href='/cars'">Cars</th>
+                <th onclick="window.location.href='/rentalContract'">Rentals</th>
+                <th onclick="window.location.href='/customer'">Customers</th>
+                <th onclick="window.location.href='/feedback'">Report a bug</th>
+            </table>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="table-title">
+            <h1 th:text="'Details for ' + ${car.registrationNumber}"></h1>
+        </div>
+        <div class="table-container">
+            <div class="menu-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Registration Number</th>
+                        <th>Car Type</th>
+                        <th>Car Brand</th>
+                        <th>Car Model</th>
+                        <th>Car Variant</th>
+                        <th>Price Per Kilometers</th>
+                        <th>Engine Size</th>
+                        <th>Horse Power</th>
+                        <th>Fuel Type</th>
+                        <th>First Registration Date</th>
+                        <th>Odometer</th>
+                        <th>Help</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td th:text="${car.registrationNumber}"></td>
+                        <td th:text="${car.carType}"></td>
+                        <td th:text="${car.brand}"></td>
+                        <td th:text="${car.model}"></td>
+                        <td th:text="${car.variant}"></td>
+                        <td th:text="${car.pricePerKilometer}"></td>
+                        <td th:text="${car.engineSize}"></td>
+                        <td th:text="${car.horsePower}"></td>
+                        <td th:text="${car.fuelType}"></td>
+                        <td th:text="${car.registrationDate}"></td>
+                        <td th:text="${car.odometer}"></td>
+                        <td><span class="material-symbols-outlined" onclick="window.location.href='/feedback'">help</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="menu-button table-button" onclick="window.location.href='/cars'">
+                <p>Return</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

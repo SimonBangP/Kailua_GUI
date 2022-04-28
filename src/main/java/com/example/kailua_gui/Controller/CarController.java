@@ -49,7 +49,7 @@ public class CarController {
     @GetMapping("/carDetails/{registrationNumber}")
     public String viewSpecificCar(@PathVariable("registrationNumber") String registrationNumber, Model model) {
         model.addAttribute("car", carService.findSpecificCar(registrationNumber));
-        return "cars/carDetails";
+        return "cars/detailsCar";
     }
 }
 
